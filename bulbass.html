@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb</title>
+</head>
+<body>
+
+    <button onclick="onOff()" id="btn" style="width: 80px; height: 110;">ON</button>
+    <img src="images/pic_bulboff (1).gif" alt="" id="demo">        
+
+
+<script>
+    
+ onOff=()=> {
+    if (btn.innerHTML == 'ON'){
+        btn.innerHTML = 'OFF'
+        demo.src = 'images/pic_bulbon.gif';
+    }else {
+        btn.innerHTML = 'ON';
+        demo.src = "images/pic_bulboff (1).gif";
+    }
+      
+}
+
+</script>
+ 
+    
+</body>
+</html>

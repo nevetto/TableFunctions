@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <ul>
+        <li>
+            <label for="column">Add a Column</label>
+            <input type="number" id="column" />
+        </li>
+        <li>
+            <label for="row">Add a Row</label>
+            <input type="number" id="row" />
+        </li>
+        <li>
+            <input type="button" value="Generate" id="btnGen" />
+            <input type="button" value="Copy to Clipboard" id="copy" />
+        </li>
+    </ul>
+    <div id="wrap"></div>  -->
+
+    <script>
+//         (function (window, document, undefined) {
+//     "use strict";
+
+//     var wrap = document.getElementById("wrap"),
+//         setColumn = document.getElementById("column"),
+//         setRow = document.getElementById("row"),
+//         btnGen = document.getElementById("btnGen"),
+//         btnCopy = document.getElementById("btnCopy");
+
+//     btnGen.addEventListener("click", generateTable);
+//     btnCopy.addEventListener("click", copyTo);
+
+//     function generateTable(e) {
+//         var newTable = document.createElement("table"),
+//             tBody = newTable.createTBody(),
+//             nOfColumns = parseInt(setColumn.value, 10),
+//             nOfRows = parseInt(setRow.value, 10),
+//             row = generateRow(nOfColumns);
+
+//         newTable.createCaption().appendChild(document.createTextNode("Generated Table"));
+
+//         for (var i = 0; i < nOfRows; i++) {
+//             tBody.appendChild(row.cloneNode(true));
+//         }
+
+//         (wrap.hasChildNodes() ? wrap.replaceChild : wrap.appendChild).call(wrap, newTable, wrap.children[0]);
+//     }
+
+//     function generateRow(n) {
+//         var row = document.createElement("tr"),
+//             text = document.createTextNode("hjhj");
+
+//         for (var i = 0; i < n; i++) {
+//             row.insertCell().appendChild(text.cloneNode(true));
+//         }
+
+//         return row.cloneNode(true);
+//     }
+
+//     function copyTo(e) {
+//         prompt("Copy to clipboard: Ctrl+C, Enter", wrap.innerHTML);
+//     }
+// }(window, window.document));
+
+
+
+
+
+
+
+
+
+
+
+
+function generateTable(table, data) {
+  for (let element of data) {
+    let row = table.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
+    }
+  }
+}
+ 
+
+
+
+
+let table = document.querySelector("table");
+let data = Object.keys(mountains[0]);
+generateTableHead(table, data);
+generateTable(table, mountains);
+
+
+let table = document.querySelector("table");
+let data = Object.keys(mountains[0]);
+generateTable(table, mountains); // generate the table first
+generateTableHead(table, data); // then the head
+
+
+function generateTable()
+function generateTable()
+    </script>
+</body>
+</html>
